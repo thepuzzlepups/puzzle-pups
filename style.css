@@ -1,0 +1,59 @@
+/* Puzzle Pups' own colours (PuzzlePups/UI/Palette.swift); always light, like the app. */
+:root {
+  --paper: #FFFDF8;
+  --cream: #FFF6E6;
+  --ink: #2A2733;
+  --ink-soft: #5D5868;
+  --line: #E6DCCB;
+  --teal: #0F6E74; /* the app's teal, darkened for 5.9:1 contrast as link text */
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: var(--cream);
+  color: var(--ink);
+  font: 400 1.25rem/1.6 ui-rounded, "SF Pro Rounded", -apple-system, system-ui, sans-serif;
+}
+
+main {
+  max-width: 44rem;
+  margin: 0 auto;
+  padding: 2rem 1rem 3rem;
+}
+
+header {
+  display: flex;
+  gap: 1.25rem;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+header img { border-radius: 22%; flex: none; }
+
+h1 { font-size: 2.4rem; line-height: 1.15; margin: 0; }
+h2 { font-size: 1.6rem; margin: 2rem 0 0.5rem; }
+h3 { font-size: 1.3rem; margin: 1.75rem 0 0.25rem; }
+p { margin: 0.5rem 0; }
+.lead { color: var(--ink-soft); font-size: 1.3rem; margin: 0.25rem 0 0; }
+
+section {
+  background: var(--paper);
+  border: 2px solid var(--line);
+  border-radius: 1.25rem;
+  padding: 0.5rem 1.5rem 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+section > h2:first-child, section > p:first-child { margin-top: 1rem; }
+
+a { color: var(--teal); font-weight: 700; text-underline-offset: 0.15em; }
+
+footer { text-align: center; }
+
+@media (max-width: 30rem) {
+  header { flex-direction: column; align-items: flex-start; }
+  h1 { font-size: 2rem; }
+  section { padding: 0.25rem 1rem 1.25rem; }
+}
